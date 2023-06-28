@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E555C0D2413F4C50049A1A2 /* MuxSpaces.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* MuxSpaces.m */; };
-		F4FF95D7245B92E800C19C63 /*  MuxSpaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /*  MuxSpaces.swift */; };
+		07CB65CF2A4CB826008B913C /* MuxSpaces in Frameworks */ = {isa = PBXBuildFile; productRef = 07CB65CE2A4CB826008B913C /* MuxSpaces */; };
+		07CB65D12A4CB826008B913C /* MuxSpacesUX in Frameworks */ = {isa = PBXBuildFile; productRef = 07CB65D02A4CB826008B913C /* MuxSpacesUX */; };
+		F4FF95D7245B92E800C19C63 /* MuxSpaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /* MuxSpaces.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +36,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07CB65CF2A4CB826008B913C /* MuxSpaces in Frameworks */,
+				07CB65D12A4CB826008B913C /* MuxSpacesUX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +78,10 @@
 			dependencies = (
 			);
 			name = MuxSpaces;
+			packageProductDependencies = (
+				07CB65CE2A4CB826008B913C /* MuxSpaces */,
+				07CB65D02A4CB826008B913C /* MuxSpacesUX */,
+			);
 			productName = RCTDataManager;
 			productReference = 134814201AA4EA6300B7C361 /* libMuxSpaces.a */;
 			productType = "com.apple.product-type.library.static";
@@ -102,6 +109,9 @@
 				en,
 			);
 			mainGroup = 58B511D21A9E6C8500147676;
+			packageReferences = (
+				07CB65CD2A4CB826008B913C /* XCRemoteSwiftPackageReference "mux-spaces-sdk-swift-distribution" */,
+			);
 			productRefGroup = 58B511D21A9E6C8500147676;
 			projectDirPath = "";
 			projectRoot = "";
@@ -117,7 +127,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4FF95D7245B92E800C19C63 /* MuxSpaces.swift in Sources */,
-				B3E7B58A1CC2AC0600A0062D /* MuxSpaces.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +287,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		07CB65CD2A4CB826008B913C /* XCRemoteSwiftPackageReference "mux-spaces-sdk-swift-distribution" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/muxinc/mux-spaces-sdk-swift-distribution";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		07CB65CE2A4CB826008B913C /* MuxSpaces */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 07CB65CD2A4CB826008B913C /* XCRemoteSwiftPackageReference "mux-spaces-sdk-swift-distribution" */;
+			productName = MuxSpaces;
+		};
+		07CB65D02A4CB826008B913C /* MuxSpacesUX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 07CB65CD2A4CB826008B913C /* XCRemoteSwiftPackageReference "mux-spaces-sdk-swift-distribution" */;
+			productName = MuxSpacesUX;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 58B511D31A9E6C8500147676 /* Project object */;
 }
